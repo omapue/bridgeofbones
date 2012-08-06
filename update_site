@@ -1,0 +1,6 @@
+pushd /Users/omapue/projects/bridgeofbones
+git add .
+git commit -a -m "update"
+git push github gh-pages
+popd
+
