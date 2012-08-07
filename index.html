@@ -5,37 +5,60 @@
 
 <style>
 body {
-	display:none;
 	font-size: 30px;
 	line-height: 32px;
 }
+.animate{display:none;}
 .container{margin-top:100px;}
 </style>
-
 <script type="text/javascript">
+	//var delay = 0;
+	var delay = 1000;
+	
+	var animate_1 = function() {$("#animate_1").fadeIn(delay, animate_2);}
+	var animate_2 = function() {$("#animate_2").fadeIn(delay, animate_3);}
+	var animate_3 = function() {$("#animate_3").fadeIn(delay, animate_4);}
+	var animate_4 = function() {$("#animate_4").fadeIn(delay, animate_5);}
+	var animate_5 = function() {$("#animate_5").fadeIn(delay, animate_6);}
+	var animate_6 = function() {$("#animate_6").fadeIn(delay);}
+	
 	$(function () {
-		$("body").fadeIn(4000);
+		animate_1();
 	});
 </script>
 </head>
 <body>
 	<div class="container">
 		<div id="poem">
-            The soot of darkened,<br/>
-            silenced songs,<br/>
-            hidden underfoot–<br/>
-            underbelly of our sleeping hearts.<br/><br/>
-             
-            Our roots are<br/> 
-            common ground…<br/><br/>
-            
-            Let’s not lean on broken stilts<br/>
-            but trees, instead;<br/>
-            not non-essential splits.<br/>
-            let’s lean on life, instead:<br/>
-            the common pact.<br/><br/>
-            
-            Begins, the art of mourning-morning song…
+            <span class="animate" id="animate_1">
+            	The soot
+            </span> 
+            <span class="animate" id="animate_2">
+            	of
+            </span> 
+            <span class="animate" id="animate_3">
+            	darkened,<br/>
+            </span>
+            <span class="animate" id="animate_4">
+            	silenced songs,<br/>
+            	hidden underfoot–<br/>
+            </span>
+            <span class="animate" id="animate_5">
+            	underbelly of our sleeping hearts.<br/><br/>
+            </span>
+         
+            <span class="animate" id="animate_6">
+            	Our roots are<br/> 
+                common ground…<br/><br/>
+                
+                Let’s not lean on broken stilts<br/>
+                but trees, instead;<br/>
+                not non-essential splits.<br/>
+                let’s lean on life, instead:<br/>
+                the common pact.<br/><br/>
+                
+                Begins, the art of mourning-morning song…
+            </span>
     	</div>
   	</div>
 </body>
